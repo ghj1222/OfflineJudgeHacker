@@ -6,10 +6,10 @@ using namespace std;
 
 //The name of some files.
 //Please change it.
-const char            *InputFileName = "zmjring.in";
-const char           *OutputFileName = "zmjring.out";
-const char    *InputDataNameTemplate = "color%d.in";
-const char   *OutputDataNameTemplate = "color%d.out";
+const char            *InputFileName = "probname.in";
+const char           *OutputFileName = "probname.out";
+const char    *InputDataNameTemplate = "probname%d.in";
+const char   *OutputDataNameTemplate = "probname%d.out";
 
 //The range of testdatas.
 //Please change it.
