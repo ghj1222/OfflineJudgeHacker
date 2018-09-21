@@ -4,7 +4,7 @@ by ghj1222
 
 This repo allows you to AC in cena, lemon, etc...
 
-This project is being developed.
+This project is undering development
 
 I may stop developing of this project because of various reasons.
 
