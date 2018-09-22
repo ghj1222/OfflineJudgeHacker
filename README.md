@@ -10,6 +10,12 @@ I may stop developing of this project because of various reasons.
 
 **Warning**: You **MUSTN'T** use this program to do any **ILLEGAL** things!!!
 
+> 9.22 upd:
+>
+> I will develop the Lemon version based on the Cena version code.
+>
+> Because of there's lots of competitons, it needs a few days.
+
 ---
 
 Develop records
