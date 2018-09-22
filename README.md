@@ -14,7 +14,7 @@ I may stop developing of this project because of various reasons.
 >
 > I will develop the Lemon version based on the Cena version code.
 >
-> Because of there's lots of competitons, it needs a few days.
+> Because of there's lots of contests on nowcoder and etc, it needs a few days.
 
 ---
 
