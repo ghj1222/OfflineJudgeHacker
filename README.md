@@ -2,24 +2,14 @@
 
 by ghj1222
 
-This repo allows you to AC in cena, lemon, etc...
+英文水平太渣了，写中文吧
 
-This project is undering development
+这份代码能让你在离线评测机中AC。
 
-I may stop developing of this project because of various reasons.
+用法：更改少量配置信息后，直接在离线评测机中提交。
 
-**Warning**: You **MUSTN'T** use this program to do any **ILLEGAL** things!!!
+原理：直接盗取评测数据。
 
-> 9.22 upd:
->
-> I will develop the Lemon version based on the Cena version code.
->
-> Because of there's lots of contests on nowcoder and etc, it needs a few days.
+开发进展：Cena版刚起步。
 
----
-
-Develop records
-
-```
-20180921 CenaJudgeHacker 0.1
-```
+9月23日更新：支持自定义得分情况。
