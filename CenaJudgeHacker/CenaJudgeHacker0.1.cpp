@@ -21,8 +21,12 @@ const int                      Upper = 20;
 const int                MaxFileSize = 1000000;
 const int                MaxNameSize = 1000;
 
-//DO NOT change the next things.
-//Or you may get CE, RE or WA.
+//You Can Decide whice point get what result.
+enum statement{AC, WA, TLE, MLE, RE_stack, RE_div0, RE_memory};
+
+const int result[] = {0, AC, AC, AC, WA, WA, WA, TLE, TLE, TLE, MLE, MLE, MLE, RE_stack, RE_stack, RE_stack, RE_div0, RE_div0, RE_div0, RE_memory, RE_memory};
+
+//Enjoy!
 char InputFile[MaxFileSize];
 char InputData[MaxFileSize];
 char OutputData[MaxFileSize];
@@ -49,6 +53,23 @@ void PrintToFile(FILE *fp, char *str)
 		fputc(str[p], fp);
 		p++;
 	}
+}
+
+void GetMLE()
+{
+	for (int i = 1; i <= 10000; i++)
+	{
+		int *a = new int[10000000];
+		a[1234567] = 1;
+	}
+}
+
+void GetRE()
+{
+	int a[2000];
+	a[123] = 1;
+	a[234] = a[123];//Avoid -Wall warning
+	GetRE();
 }
 
 int main()
@@ -85,14 +106,46 @@ int main()
 		InputDataPtr = 0;
 		if (strcmp(InputFile, InputData) == 0)
 		{
-			sprintf(OutputDataName, OutputDataNameTemplate, i);
-			strcpy(dataPath, MyPath);
-			strcat(dataPath, OutputDataName);
-			FILE *OutputDataPtr = fopen(dataPath, "r");
-			ReadFromFile(OutputDataPtr, OutputData);
-			fclose(OutputDataPtr);
-			OutputDataPtr = 0;
-			PrintToFile(stdout, OutputData);
+			if (result[i] == AC || result[i] == WA)
+			{
+				sprintf(OutputDataName, OutputDataNameTemplate, i);
+				strcpy(dataPath, MyPath);
+				strcat(dataPath, OutputDataName);
+				FILE *OutputDataPtr = fopen(dataPath, "r");
+				ReadFromFile(OutputDataPtr, OutputData);
+				fclose(OutputDataPtr);
+				OutputDataPtr = 0;
+				PrintToFile(stdout, OutputData);
+			}
+			if (result[i] == WA)//Output more things to get WA
+			{
+				PrintToFile(stdout, OutputData);
+			}
+			if (result[i] == TLE)
+			{
+				while (1);
+			}
+			if (result[i] == MLE)
+			{
+				GetMLE();
+			}
+			if (result[i] == RE_stack)
+			{
+				GetRE();
+			}
+			if (result[i] == RE_div0)
+			{
+				int x = 0;//Avoid -Wall warning
+				int fuckyou = 5 / x;
+				x = fuckyou;
+			}
+			if (result[i] == RE_memory)
+			{
+				int a[5];
+				a[1] = 1;
+				a[2] = a[1];//Avoid -Wall warning
+				a[40000] = 4;
+			}
 			fclose(stdin);
 			fclose(stdout);
 			return 0;
